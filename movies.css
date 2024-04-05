@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --red: #e50914;
+  --black: #000000;
+  --light-color: #181818;
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  background-color: #000000;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+}
+
+/* Nav Bar */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  padding: 1rem 7%;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  box-shadow: var(--box-shadow);
+}
+
+header .logo {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+header .logo i {
+  color: #df1ac0;
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  color: #fff;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  color: #fff;
+  background: #df1ac0;
+}
+
+header .icons i,
+header .icons a {
+  cursor: pointer;
+  margin-left: .5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #df1ac0;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+  color: #df1ac0;
+  background: #fff;
+  transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+  display: none;
+}
+
+header{
+  border-bottom: 2px solid #df1ac0;
+}
+/* Advertising Box*/
+
+.adv{
+  height: 80vh;
+  width: calc(100%-20%);
+  margin: 07vh;
+  margin-top: 100px;
+  display: flex;
+  border-radius: 20px;
+  border: 2px solid #df1ac0;
+  background-color: #df31ab3c;
+  flex-direction: column;
+  position: relative;
+  padding: 40px;
+}
+
+.adv1{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  background-color: #df31ab00;
+}
+
+.adv-1-1{
+  color: white;
+  background-color: #df31ab00;
+  font-size: 55px;
+  font-weight: 300;
+
+}
+
+.adv-1-2{
+  color: white;
+  background-color: #df31ab00;
+  font-size: 33px;
+  font-weight: 200;
+}
+
+/*.adv-1-2{
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+*/
+.btn {
+  padding: 3px 14px;
+  font-weight: 500;
+  background-color: rgba(23, 23, 23, 0.7);
+  font-size: 20px;
+  color: white;
+  border:2px solid white;
+  border-radius: 4px;
+  
+
+}
+
+/*  Slider */
+.slider {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 30vh;
+  max-width: 70vw;
+  margin-left: 140px;
+  margin-right: 140px;
+  background-color: #df31ab00;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.sli {
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-height: 44vh;
+  object-fit: cover;
+  gap: 30px;
+  background-color: #df31ab00;
+  
+}
+
+.slide1 img {
+  border: 2px;
+  border-radius: 8px ;
+  height: 300px;
+  width: 230px;
+  background-color: #df31ab00;
+
+}
+
+
+/* superhits Slider */
+.superhit-slider {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: calc(100%-30%);
+  max-width: calc(100%-30%);
+  margin-left: 95px;
+  margin-right: 140px;
+
+
+}
+
+.sli-hit {
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  overflow-x: auto;
+  scrollbar-width: none;
+  height: 290px;
+  object-fit: cover;
+  gap: 30px;
+
+
+}
+
+.slide1-hit img {
+  border: 1px;
+  border-radius: 8px;
+  height: 250px;
+  width: 170px;
+
+}
+.hits {
+  font-size: 22px;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  margin-left: 110px;
+  padding: 30px;
+}
+
+
+
+
+/*   Love in Air slider 2*/
+.love-in-air{
+  height: 70vh;
+  width: 90vw;
+  margin-left: 60px;
+  margin-top: 40px;
+  display: flex;
+  border-radius: 20px;
+  border: 2px solid #df1ac0;
+  background-color: #fa69cf66;
+  flex-direction: column;
+  position: relative;
+  padding: 40px;
+  
+}
+
+.love{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  background-color: #df31ab00 ;
+}
+
+.love-1-1{
+  color: white;
+  background-color: #df31ab00;
+  font-size: 44px;
+  font-weight: 300;
+
+}
+
+
+.love-slider {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 10vh;
+  max-width: 80vw;
+  margin-left: 95px;
+  margin-right: 140px;
+  background-color: #df31ab00;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.sli2 {
+
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  overflow-x: auto;
+  scrollbar-width: none;
+  height: 35vh;
+  object-fit: cover;
+  gap: 30px;
+  background-color:#df31ab00;
+
+
+}
+
+.slide2{
+  background-color:#df31ab00;
+  height: 35vh;
+}
+
+.slide2 img {
+  border: 1px;
+  border-radius: 8px;
+  height: 35vh;
+  width: 170px;
+  object-fit: cover;
+  background-color: #df31ab00;
+}
+
+
+/* Action movies Slider */
+
+
+
+.Action {
+  font-size: 22px;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  margin-left: 110px;
+  padding: 30px;
+}
+
+.Action-slider{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: calc(100%-30%);
+  max-width: calc(100%-30%);
+  margin-left: 140px;
+  margin-right: 140px;
+  background-color: #df31ab00;
+
+}
+
+.sli3 {
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-height: 300px;
+  object-fit: cover;
+  gap: 70px;
+  background-color: #df31ab00;
+
+}
+
+.slide3 img {
+  border: 2px;
+  border-radius: 8px ;
+  height: 300px;
+  width: 230px;
+  background-color: #df31ab00;
+
+}
+
+/*  Retro Mania Slider */
+
+
+
+.retro {
+  font-size: 22px;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  margin-left: 110px;
+  padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+/*  media query for advertiseing box*/
+
+/* Add your existing CSS code here */
+
+/* Media Queries for Responsive Design */
+
+/* Responsive Navigation */
+@media(max-width: 768px) {
+  /* Adjustments for smaller screens */
+  header .navbar {
+    padding: 1rem;
+  }
+
+  header .navbar a {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  /* Show/hide menu bars icon */
+  header .icons #menu-bars {
+    display: inline-block;
+  }
+
+  /* Adjust position and style of the navbar */
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Media Queries for Advertisement Box */
+
+
+/*  media query for advertiseing box*/
+@media screen and (max-width: 1200px) {
+  .adv {
+    width: calc(100% - 10%);
+    margin: 5vh;
+  }
+
+  .slider, .superhit-slider, .love-in-air, .Action-slider {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .sli, .sli-hit, .sli2, .sli3 {
+    gap: 15px;
+  }
+
+  .faqbox {
+    max-width: 80vw;
+  }
+
+  footer {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .adv {
+    width: calc(100% - 5%);
+    margin: 3vh;
+    padding: 20px;
+  }
+
+  .slider, .superhit-slider, .love-in-air, .Action-slider {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .sli, .sli-hit, .sli2, .sli3 {
+    gap: 10px;
+  }
+
+  .faqbox {
+    max-width: 90vw;
+  }
+
+  footer {
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .adv {
+    height: auto;
+    padding: 10px;
+  }
+
+  .slider, .superhit-slider, .love-in-air, .Action-slider {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sli, .sli-hit, .sli2, .sli3 {
+    gap: 5px;
+  }
+
+  .faqbox {
+    max-width: 95vw;
+  }
+
+  footer {
+    max-width: 95vw;
+  }
+}
