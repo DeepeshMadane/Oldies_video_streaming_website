@@ -1,27 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <a href="" class="logo"><i class="fas fa-infinity"></i>Oldies</a>
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#home">Movies</a>
-      <a href="#home">Premium</a>
-      <a href="#home">Sign In</a>
-    </nav>
-    <div class="icons">
-      <i class="fas fa-bars" id="menu-bars"></i>
-      <i class="fas fa-search" id="search-icon"></i>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="" class="logo"><i class="fas fa-infinity"></i>Oldies</a>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#home">Movies</a>
+        <a href="#home">Premium</a>
+        <a href="login.html">Sign In</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search movies">
+        <button class="search-btn">Search</button>
+      </div>
+    </header>
+
+    /*slider*/
+
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="movies/Thumnails/f0d16a829ef783dc7c1e220a5c7be674.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <button class="btn-slider">Play Now</button>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="movies/Thumnails/Amar, Akbar and Anthony.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <button class="btn-slider">Play Now</button>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="movies/Thumnails/coolie-indian-movie-poster.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <button class="btn-slider">Play Now</button>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </header>
-  <script src="script.js"></script>
-</body>
+    <div class="subscription">
+      <p>Enjoy High Quality Videos</p>
+      <p>Starting in just Rs 30/-</p>
+      <button>Subcribe</button>
+    </div>
+
+    <div class="superhits">
+      <h3>Superhits</h3>
+      <ul class="sli">
+        <li class="M1 hello">
+          <button class="Top-10-element-1">
+            <img
+              src="movies/Thumnails/Coolie (1983) Amitabh Bachchan, Classic, Indian….jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M2 hello">
+          <button class="Top-10-element-2">
+            <img src="movies/Thumnails/Mother_India_poster.jpg" alt="" />
+          </button>
+        </li>
+        <li class="M3 hello">
+          <button class="Top-10-element-3">
+            <img src="movies/Thumnails/61R5Fjrp5tL._AC_UF1000,1000_QL80_.jpg" />
+          </button>
+        </li>
+        <li class="M4 hello">
+          <button class="Top-10-element-4">
+            <img
+              src="movies/Thumnails/Sholay-1974-promotional-poster.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M5 hello">
+          <button class="Top-10-element-5">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M6 hello">
+          <button class="Top-10-element-6">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M7 hello">
+          <button class="Top-10-element-7">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M8 hello">
+          <button class="Top-10-element-8">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M9 hello">
+          <button class="Top-10-element-9">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M10 hello">
+          <button class="Top-10-element-10">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="golden-era">
+      <h3>Golden Era</h3>
+      <ul class="sli">
+        <li class="M1 hello">
+          <button class="Top-10-element-1">
+            <img
+              src="movies/Thumnails/Coolie (1983) Amitabh Bachchan, Classic, Indian….jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M2 hello">
+          <button class="Top-10-element-2">
+            <img src="movies/Thumnails/Mother_India_poster.jpg" alt="" />
+          </button>
+        </li>
+        <li class="M3 hello">
+          <button class="Top-10-element-3">
+            <img src="movies/Thumnails/61R5Fjrp5tL._AC_UF1000,1000_QL80_.jpg" />
+          </button>
+        </li>
+        <li class="M4 hello">
+          <button class="Top-10-element-4">
+            <img
+              src="movies/Thumnails/Sholay-1974-promotional-poster.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M5 hello">
+          <button class="Top-10-element-5">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M6 hello">
+          <button class="Top-10-element-6">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M7 hello">
+          <button class="Top-10-element-7">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M8 hello">
+          <button class="Top-10-element-8">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M9 hello">
+          <button class="Top-10-element-9">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M10 hello">
+          <button class="Top-10-element-10">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="old-beauties">
+      <h3>Old Beauties</h3>
+      <ul class="sli">
+        <li class="M1 hello">
+          <button class="Top-10-element-1">
+            <img
+              src="movies/Thumnails/Coolie (1983) Amitabh Bachchan, Classic, Indian….jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M2 hello">
+          <button class="Top-10-element-2">
+            <img src="movies/Thumnails/Mother_India_poster.jpg" alt="" />
+          </button>
+        </li>
+        <li class="M3 hello">
+          <button class="Top-10-element-3">
+            <img src="movies/Thumnails/61R5Fjrp5tL._AC_UF1000,1000_QL80_.jpg" />
+          </button>
+        </li>
+        <li class="M4 hello">
+          <button class="Top-10-element-4">
+            <img
+              src="movies/Thumnails/Sholay-1974-promotional-poster.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M5 hello">
+          <button class="Top-10-element-5">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M6 hello">
+          <button class="Top-10-element-6">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M7 hello">
+          <button class="Top-10-element-7">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M8 hello">
+          <button class="Top-10-element-8">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M9 hello">
+          <button class="Top-10-element-9">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M10 hello">
+          <button class="Top-10-element-10">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="Generation-hits">
+      <h3>Decade hits</h3>
+      <ul class="sli">
+        <li class="M1 hello">
+          <button class="Top-10-element-1">
+            <img
+              src="movies/Thumnails/Coolie (1983) Amitabh Bachchan, Classic, Indian….jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M2 hello">
+          <button class="Top-10-element-2">
+            <img src="movies/Thumnails/Mother_India_poster.jpg" alt="" />
+          </button>
+        </li>
+        <li class="M3 hello">
+          <button class="Top-10-element-3">
+            <img src="movies/Thumnails/61R5Fjrp5tL._AC_UF1000,1000_QL80_.jpg" />
+          </button>
+        </li>
+        <li class="M4 hello">
+          <button class="Top-10-element-4">
+            <img
+              src="movies/Thumnails/Sholay-1974-promotional-poster.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M5 hello">
+          <button class="Top-10-element-5">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M6 hello">
+          <button class="Top-10-element-6">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M7 hello">
+          <button class="Top-10-element-7">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M8 hello">
+          <button class="Top-10-element-8">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M9 hello">
+          <button class="Top-10-element-9">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="M10 hello">
+          <button class="Top-10-element-10">
+            <img
+              src="movies/Thumnails/71ylkypV0aL._AC_UF1000,1000_QL80_.jpg"
+              alt=""
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="seperate"></div>
+    <!--<div class="feedback">
+      <form>
+        <label for="rating">How much do you like the Oldies website? (Scale from 1 to 5)</label><br>
+        <input type="radio" id="rating1" name="rating" value="1">
+        <label for="rating1">1</label>
+        <input type="radio" id="rating2" name="rating" value="2">
+        <label for="rating2">2</label>
+        <input type="radio" id="rating3" name="rating" value="3">
+        <label for="rating3">3</label>
+        <input type="radio" id="rating4" name="rating" value="4">
+        <label for="rating4">4</label>
+        <input type="radio" id="rating5" name="rating" value="5">
+        <label for="rating5">5</label><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  -->
+
+  <footer>
+    <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: example@example.com</p>
+        <p>Phone: +1 234 567 890</p>
+    </div>
+    <div class="footer-column">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Premium</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Stars</h3>
+        <ul>
+            <a href=""><li>Amitabh Bachchan</li></a>
+            <a href=""><li>Dev Anand</li></a>
+            <a href=""><li>Raj Kapoor</li></a>
+            <a href=""><li>Dharmendra</li></a>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Account</h3>
+        <p><a href="#">Sign Out</a></p>
+    </div>
+    <!-- Feedback column -->
+    <div class="footer-column feedback-column">
+        <h3>Feedback</h3>
+        <p><a href="feedback.html">Leave Feedback</a></p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
