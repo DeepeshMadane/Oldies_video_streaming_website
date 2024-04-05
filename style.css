@@ -4,7 +4,7 @@
   --red: #e50914;
   --black: #000000;
   --light-color: #181818;
-  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -16,12 +16,17 @@
   outline: none;
   border: none;
   text-transform: capitalize;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  scroll-padding-top:5.5rem;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background-color: black;
 }
 
 header {
@@ -37,29 +42,40 @@ header {
   z-index: 10000;
   box-shadow: var(--box-shadow);
 }
+
+header {
+  border-bottom: 2px solid #df1ac0;
+}
+
 header .logo {
   color: #fff;
   font-size: 2.5rem;
   font-weight: bolder;
+  text-decoration: none;
 }
+
 header .logo i {
   color: #df1ac0;
 }
+
 header .navbar a {
   font-size: 1.7rem;
-  border-radius: .5rem;
-  padding: .5rem 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
   color: #fff;
+  text-decoration: none;
 }
+
 header .navbar a.active,
 header .navbar a:hover {
   color: #fff;
   background: #df1ac0;
 }
+
 header .icons i,
 header .icons a {
   cursor: pointer;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   height: 4.5rem;
   line-height: 4.5rem;
   width: 4.5rem;
@@ -69,18 +85,57 @@ header .icons a {
   border-radius: 50%;
   background-color: #df1ac0;
 }
+
 header .icons i:hover,
 header .icons a:hover {
-  color: #df1ac0;
+  color: gray;
   background: #fff;
   transform: rotate(360deg);
 }
 
-header .icons #menu-bars{
+header .icons #menu-bars {
   display: none;
 }
+/* Your existing CSS */
+/* Add these styles for search container */
+.search-container {
+  display: none; /* Initially hide search container */
+}
 
-@media(max-width: 991px) {
+.search-bar {
+  width: 200px; /* Adjust width as needed */
+  padding: 8px;
+  margin-right: 8px;
+}
+
+.search-btn {
+  padding: 8px 16px;
+  background-color: #df1ac0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 150px; /* Adjust width for smaller screens */
+  }
+
+  .search-btn {
+    padding: 8px; /* Adjust button padding for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .search-bar {
+    width: 120px; /* Further adjust width for even smaller screens */
+  }
+}
+
+
+@media (max-width: 991px) {
   html {
     font-size: 55%;
   }
@@ -88,35 +143,631 @@ header .icons #menu-bars{
     padding: 1rem 2rem;
   }
 }
-@media(max-width: 768px) {
+
+@media (max-width: 768px) {
   header .icons #menu-bars {
     display: inline-block;
   }
-  header .navbar{
+  header .navbar {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background:var(--black);
-    border-top: .1rem solid rgba(0, 0, 0, .2);
-    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+    background: var(--black);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
-    clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-  header .navbar a{
+  header .navbar a {
     display: block;
     padding: 1.5rem;
     margin: 1rem;
     font-size: 2rem;
-    background:#df1ac0;
+    background: #df1ac0;
   }
 }
-@media (max-width: 468px){
-  html{
+
+
+@media (max-width: 468px) {
+  html {
     font-size: 50%;
   }
 }
 
+/* slider */
+.carousel-item {
+  position: relative;
+  border-bottom: 2px solid #df1ac0;
+}
+
+.carousel-item img {
+  position: relative;
+  height: 80vh;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.subscription {
+  border: 2px solid #df1ac0;
+  margin: 5%;
+  padding: 1%;
+  border-radius: 10%;
+  background-color: #df31ab3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.subscription p {
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.subscription button {
+  border: 2px solid white;
+  padding: 10px 26px;
+  background-color: #000000;
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .subscription {
+    padding: 5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .subscription {
+    padding: 10%;
+  }
+
+  .subscription p {
+    font-size: 2rem;
+  }
+
+  .subscription button {
+    padding: 8px 26px;
+  }
+}
+
+.superhits,
+.golden-era,
+.old-beauties,
+.Generation-hits {
+  color: #fff;
+  margin: 30px;
+}
+
+.superhits h3,
+.golden-era h3,
+.old-beauties h3,
+.Generation-hits h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.slider {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: calc(100% - 30%);
+  max-width: calc(100% - 30%);
+  margin-left: 95px;
+  margin-right: 140px;
+}
+
+.hello {
+  margin: 10px;
+}
+
+.sli {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  overflow-x: auto;
+  scrollbar-width: none;
+  height: 290px;
+  object-fit: cover;
+  list-style: none;
+}
+
+.sli img {
+  border: 1px;
+  border-radius: 8px;
+  height: 250px;
+  width: 170px;
+}
+
+.sli button {
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  background-color: black;
+}
+
+@media screen and (max-width: 1200px) {
+  .slider {
+    margin-left: 50px;
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slider {
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slider {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+}
+
+.seperate{
+  border-bottom: 2px solid #df1ac0;
+  width: calc(100% - 10%);
+  margin: 0 auto;
+}
+
+.seperate1{
+  border: 2px solid #df1ac0;
+  width: calc(100%-10%);
+  margin: 0 auto;
+}
+
+/* Adjustments for footer */
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .subscription {
+    padding: 5%;
+  }
+
+  .subscription p {
+    font-size: 2rem;
+  }
+
+  .subscription button {
+    padding: 8px 26px;
+  }
+
+  .slider {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  .seperate {
+    width: calc(100% - 20%);
+  }
+
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 576px) {
+  .slider {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  .seperate {
+    width: calc(100% - 30%);
+  }
+}
+
+/* Adjustments for smaller font sizes */
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .slider {
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+  .seperate {
+    width: calc(100% - 40%);
+  }
+}
+.btn-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #df1ac0;
+  padding: 15px;
+  background-color:#df31ab3c; /* Adjusted background color */
+  color: #fff;
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 0 auto; /* Center the button */
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .btn-slider {
+    width: 80%; /* Adjust width as needed */
+  }
+}
+/*
+.feedback {
+  padding: 30px; 
+  max-width: 400px; 
+  margin: 0 auto; 
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center; 
+  font-size: 1.2rem; 
+}
+
+.feedback form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback label {
+  margin-bottom: 15px; 
+}
+
+.feedback input[type="radio"] {
+  display: none; 
+}
+
+.feedback input[type="radio"] + label {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #df1ac0;
+  color: #fff;
+  border: 2px solid #df1ac0;
+  border-radius: 5px;
+}
+
+.feedback input[type="radio"]:checked + label {
+  background-color: #fff;
+  color: #df1ac0;
+}
+
+.feedback button[type="submit"] {
+  background-color: #df1ac0; 
+  color: #fff; 
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  margin-top: 20px; 
+}
+
+@media screen and (max-width: 768px) {
+  .feedback {
+    margin: 10px;
+  }
+}
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+
+
+
+/* Additional styling for the form */
+
+.login-container {
+  max-width: 400px;
+  margin: -64px auto; /* Adjust top margin as needed */
+  padding: 30px;
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #df1ac0; /* Primary color border */
+  border-radius: 10px;
+  position: fixed; /* Fixed position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centering trick */
+  z-index: 998; /* Ensure it's below the footer */
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #df1ac0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #f0f0f0;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.signup-link a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .login-container {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 300px; /* Adjust max-width for smaller screens */
+  }
+}
+
+/* signup form*/
+.signup-container {
+  max-width: 400px;
+  margin:-80px auto; /* Adjust top margin as needed */
+  padding: 20px;
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #df1ac0; /* Primary color border */
+  border-radius: 10px;
+  position: fixed; /* Fixed position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centering trick */
+  z-index: 998; /* Ensure it's below the footer */
+}
+
+.signup-form h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #df1ac0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #f0f0f0;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.signup-link a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .signup-container {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 300px; /* Adjust max-width for smaller screens */
+  }
+}
+.loginfoot{
+  position:fixed;
+}
+
+
+
+
+
+
+/* feedbackform*/
+.feedback-container {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #df1ac0; /* Border color matching the parent's color */
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000; /* Ensure it appears on top of other elements */
+  max-width: 600px;
+  width: 90%;
+  color: #fff;
+}
+
+.feedback-form h3 {
+  text-align: center;
+}
+
+.feedback-form form {
+  background-color: transparent; /* Transparent background for the form */
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feedback-form .radio-options label {
+  margin-right: 20px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.feedback-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #555;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .feedback-container {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .feedback-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333; /* Dark gray background */
+  color: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.footer-column {
+  flex: 1 1 250px; /* Equal width columns, but can shrink */
+  margin: 0 10px;
+  max-width: 300px; /* Limit maximum width of columns */
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px; /* Add space below heading */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+.login-footer {
+  position: fixed;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-column {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .login-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensure footer appears above main content */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 30vh; /* Set maximum height for scrolling */
+    margin-top: 20px; /* Add space between footer and main content */
+  }
+
+  .login-footer .footer-column {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+  }
+}
