@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video play</title>
+    <link rel="stylesheet" href="video.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo"><i class="fas fa-infinity"></i>Oldies</a>
+      <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="premium.html">Premium</a>
+        <a href="login.html">Sign In</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search movies" />
+        <button class="search-btn">Search</button>
+      </div>
+    </header>
+
+    
+   
+      <head>   
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding-top: 44px;
+                padding-left: 77px; 
+            }
+            
+            .main-container{
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+            }
+            
+            #video-container {
+                width: 70%;
+                padding: 2px;
+                height: 80vh;
+                flex-direction: column;
+           }
+
+            #video-container video {
+                width: 100%;
+                max-width: 800px;
+                height: 80vh;
+            }
+
+            #video-container h2{
+              color: white;
+              font-size: 33px;
+              font-weight: 300;
+            }
+
+            #related-suggestions {
+                
+                width: 30%;
+                padding: 30px;
+                background-color: #000000;
+                float: right;
+                color: white;
+                margin-right: 80px;
+            }
+
+            .suggested-video h3, .suggested-video p{
+              margin: 20px 0 ;
+              
+            }
+
+            .suggested-video video {
+                width: 100%;
+                height: auto;
+            }
+
+            #sugg-video{
+              width: 100%;
+              max-width: 35vw;
+              height: 15vh;
+
+            }
+            #views{
+              color: white;
+              position: relative;
+              font-size: 30px;
+              font-weight: 200;
+              margin-top: 10px;
+            }
+            
+            .Top-element img{
+              height: 10vh;
+              width: 20vw;
+            }
+
+            
+            
+        </style>
+    </head>
+    <body>
+      <div class="main-container">
+        <div id="video-container">
+            <video id="video" controls>
+                <source src="Video\Mohabbatein 2000 720p BluRay x264 Hindi AAC - Ozlem.mp4" type="video/mp4">
+                
+            </video>
+            <h2>Mohabbatein -  Shah Rukh Khan</h2>
+            
+            
+          </div>
+
+        </div>
+        
+        <div id="related-suggestions">
+            <h2>Related Suggestions</h2>
+            <h3>Suggested Video 1</h3>
+            <div class="suggested-video" data-src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4">
+                <a href="">
+                
+                    <button class="Top-element">
+                      <video id="sugg-video" controls>
+                        <source src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4" type="video/mp4">
+                        Padmaavat
+                    </video>
+                    
+                  </button>
+                </a>
+                <h3>Padmaavat</h3>
+                <p>Deepika Padukon/ Shahid Kapoor/ Ranvver Singh</p>
+            </div>
+            <div class="suggested-video" data-src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4">
+                <h3>Suggested Video 2</h3>
+                <div class="suggested-video" data-src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4">
+                  <a href="">
+                  
+                      <button class="Top-element">
+                        <video id="sugg-video" controls>
+                          <source src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4" type="video/mp4">
+                          Padmaavat
+                      </video>
+                      
+                    </button>
+                  </a>
+                  <h3>Padmaavat</h3>
+                  <p>Deepika Padukon/ Shahid Kapoor/ Ranvver Singh</p>
+              </div>
+                
+            </div>
+            <div class="suggested-video" data-src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4">
+                <h3>Suggested Video 3</h3>
+                <div class="suggested-video" data-src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4">
+                  <a href="">
+                  
+                      <button class="Top-element">
+                        <video id="sugg-video" controls>
+                          <source src="Video\Padmaavat.2018.1080p.BluRay.x264-[YTS.AM].mp4" type="video/mp4">
+                          Padmaavat
+                      </video>
+                      
+                    </button>
+                  </a>
+                  <h3>Padmaavat</h3>
+                  <p>Deepika Padukon/ Shahid Kapoor/ Ranvver Singh</p>
+              </div>
+                
+            </div>
+            
+        </div>
+      </div>
+    
+      <script>
+        const video = document.getElementById('video');
+       
+        // Add event listener for suggested videos
+        const suggestedVideos = document.querySelectorAll('.suggested-video');
+        suggestedVideos.forEach(video => {
+            video.addEventListener('click', () => {
+                const src = video.getAttribute('data-src');
+                document.getElementById('video').src = src;
+                document.getElementById('video').play();
+            });
+        });
+    </script>
+    
+  </body>
+</html>
